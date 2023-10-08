@@ -1,0 +1,62 @@
+/*podešavanje  glavnog pregleda slidera  */
+#slider {
+  width: 90%;
+  height: 600px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.slick-list {
+  width: 100%;
+  height: 550px;
+  margin-top: 40px;
+}
+
+/* Stil za svaki slajd */
+.slide {
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  transition: transform 0.3s linear;
+}
+
+/* Stil za trenutni (centralni) slajd  koji se prikazuje*/
+.slick-center .slide {
+  width: 400%;
+  height: 500px;
+  z-index: 3;
+  animation-name: slideAnimation;
+  animation-duration: 5s;
+}
+@keyframes slideAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.img-slide {
+  width: auto;
+  height: 500px;
+  margin: 0 auto;
+  transform: scale(1);
+}
+
+/* Stil za tekst na slajdovima */
+.slide h2 {
+  margin: 20px;
+}
